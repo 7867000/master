@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PrintMax Advertising | Flex Printing & Branding Solutions</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>.instagram-btn{
+    position:fixed;
+    right:20px;
+    bottom:140px;
+    background:linear-gradient(45deg,#f9ce34,#ee2a7b,#6228d7);
+    color:white;
+    padding:14px 18px;
+    border-radius:50px;
+    text-decoration:none;
+    font-weight:600;
+    box-shadow:0 5px 15px rgba(0,0,0,0.2);
+    z-index:9999;
+    display:flex;
+    align-items:center;
+    gap:8px;
+}
+
+.instagram-btn:hover{
+    transform:scale(1.05);
+}
+.whatsapp-btn{
+    position:fixed;
+    right:20px;
+    bottom:20px;
+    background:#25D366;
+    color:white;
+    padding:14px 18px;
+    border-radius:50px;
+    text-decoration:none;
+    font-weight:600;
+    box-shadow:0 5px 15px rgba(0,0,0,0.2);
+    z-index:9999;
+}
+
+.call-btn{
+    position:fixed;
+    right:20px;
+    bottom:80px;
+    background:#1e3a8a;
+    color:white;
+    padding:14px 18px;
+    border-radius:50px;
+    text-decoration:none;
+    font-weight:600;
+    box-shadow:0 5px 15px rgba(0,0,0,0.2);
+    z-index:9999;
+}
+
+.whatsapp-btn:hover,
+.call-btn:hover{
+    transform:scale(1.05);
+}
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#f8f9fc;
+    color:#333;
+    line-height:1.6;
+}
+
+header{
+    background:linear-gradient(135deg,#0f172a,#1e3a8a);
+    color:white;
+    padding:20px 8%;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    font-size:28px;
+    font-weight:700;
+}
+
+.logo span{
+    color:#fbbf24;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:25px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    font-weight:500;
+}
+
+.hero{
+    min-height:90vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    background:linear-gradient(rgba(15,23,42,.8),rgba(15,23,42,.8)),
+    url('https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=1600&q=80');
+    background-size:cover;
+    background-position:center;
+    color:white;
+    padding:40px;
+}
+
+.hero-content h1{
+    font-size:55px;
+    margin-bottom:20px;
+}
+
+.hero-content p{
+    max-width:700px;
+    margin:auto;
+    font-size:18px;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:30px;
+    padding:14px 30px;
+    background:#fbbf24;
+    color:#111;
+    text-decoration:none;
+    border-radius:40px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.btn:hover{
+    transform:translateY(-3px);
+}
+
+section{
+    padding:80px 8%;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:50px;
+}
+
+.section-title h2{
+    font-size:38px;
+    color:#0f172a;
+}
+
+.section-title p{
+    color:#666;
+}
+
+.services{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:white;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+}
+
+.card h3{
+    margin-bottom:15px;
+    color:#1e3a8a;
+}
+
+.about{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:50px;
+    align-items:center;
+}
+
+.about img{
+    width:100%;
+    border-radius:15px;
+}
+
+.about-text h2{
+    color:#0f172a;
+    margin-bottom:20px;
+}
+
+.contact{
+    background:#0f172a;
+    color:white;
+    border-radius:20px;
+}
+
+.contact-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:40px;
+}
+
+.contact-form input,
+.contact-form textarea{
+    width:100%;
+    padding:14px;
+    margin-bottom:15px;
+    border:none;
+    border-radius:8px;
+}
+
+.contact-form button{
+    background:#fbbf24;
+    border:none;
+    padding:14px 30px;
+    border-radius:8px;
+    cursor:pointer;
+    font-weight:600;
+}
+
+footer{
+    text-align:center;
+    padding:25px;
+    background:#08101f;
+    color:white;
+}
+
+@media(max-width:768px){
+
+.hero-content h1{
+    font-size:38px;
+}
+
+.about,
+.contact-grid{
+    grid-template-columns:1fr;
+}
+
+nav{
+    flex-direction:column;
+    gap:15px;
+}
+
+nav ul{
+    flex-wrap:wrap;
+    justify-content:center;
+}
+}
+</style>
+</head>
+<body>
+
+<header>
+<nav>
+<div class="logo">MASTER <span>GRAPHICS</span></div>
+
+<ul>
+<li><a href="#home">Home</a></li>
+<li><a href="#services">Services</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
+</header>
+
+<section class="hero" id="home">
+<div class="hero-content">
+<h1>Master Graphics – Flex Printing & Branding Solutions</h1>
+<p>
+MASTER GRAPHICS is a trusted printing and advertising solution
+provider in Barnala, Punjab. We specialize in flex printing,
+banner printing, posters, standees, vinyl graphics, shop branding,
+and customized advertising materials.
+</p>
+
+<br>
+
+<p>
+We use modern printing technology to deliver vibrant colors,
+sharp print quality, and durable materials for businesses,
+retail shops, events, schools, and corporate clients.
+</p>
+
+<br>
+
+<p>
+✔ Flex Printing<br>
+✔ Banner Printing<br>
+✔ Poster Printing<br>
+✔ Standees<br>
+✔ Vinyl Graphics<br>
+✔ Shop Branding & Sign Boards
+</p>
+<a href="#contact" class="btn">Get Free Quote</a>
+</div>
+</section>
+
+<section id="services">
+<div class="section-title">
+<h2>Our Services</h2>
+<p>Complete Printing & Advertising Solutions</p>
+</div>
+
+<div class="services">
+
+<div class="card">
+<h3>Flex Printing</h3>
+<p>Premium quality flex printing for shops, businesses, events, and promotions.</p>
+</div>
+
+<div class="card">
+<h3>Banner Printing</h3>
+<p>Durable indoor and outdoor banners with vibrant colors and weather resistance.</p>
+</div>
+
+<div class="card">
+<h3>Poster Printing</h3>
+<p>Custom promotional posters for marketing campaigns and brand awareness.</p>
+</div>
+
+<div class="card">
+<h3>Standee Printing</h3>
+<p>Roll-up standees and display solutions for exhibitions, stores, and events.</p>
+</div>
+
+<div class="card">
+<h3>Vinyl Printing</h3>
+<p>High-resolution vinyl stickers, wall graphics, and branding materials.</p>
+</div>
+
+<div class="card">
+<h3>Shop Branding</h3>
+<p>Complete shop front branding, signboards, ACP boards, and visual advertising.</p>
+</div>
+
+</div>
+</section>
+
+<section id="about">
+<div class="about">
+
+<img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=1200&q=80" alt="Printing Services">
+
+<div class="about-text">
+
+
+<p>
+We specialize in high-quality digital printing and advertising solutions
+for businesses, events, retail stores, educational institutions, and
+corporate clients.
+</p>
+
+<br>
+
+<p>
+With modern printing technology and experienced professionals,
+we ensure vibrant colors, durable materials, quick turnaround,
+and competitive pricing.
+</p>
+
+<br>
+
+<p>
+✔ Flex Printing<br>
+✔ Posters & Banners<br>
+✔ Standees<br>
+✔ Vinyl Graphics<br>
+✔ Shop Branding
+</p>
+
+</div>
+
+</div>
+</section>
+
+<section id="contact">
+<div class="contact">
+
+<div class="section-title">
+<h2 style="color:white;">Contact Us</h2>
+<p style="color:#cbd5e1;">
+Request a quote for your next printing project
+</p>
+</div>
+
+<div class="contact-grid">
+
+<div>
+<div>
+<h3>Get In Touch</h3>
+<br>
+
+<p><strong>Phone / WhatsApp:</strong> +91 9872111719</p>
+
+<p><strong>Business Name:</strong> MASTER GRAPHICS</p>
+
+<p><strong>GST Registered Name:</strong> MASTER GRAPHIX</p>
+
+<p><strong>Address:</strong><br>
+Nanaksar Road,<br>
+Near Ajit Office,<br>
+Barnala, Punjab
+</p>
+<p>
+<a href="https://www.google.com/maps?q=30.359417,75.535083"
+target="_blank"
+style="background:#1e3a8a;color:white;padding:10px 15px;
+text-decoration:none;border-radius:5px;display:inline-block;">
+View Location on Google Maps
+</a>
+</p>
+<br>
+
+<p>
+Contact us for Flex Printing, Banners, Posters, Standees,
+Vinyl Printing, Shop Branding, ACP Boards and Advertising Solutions.
+</p>
+</div>
+<br>
+<p><strong>Phone:</strong> +91 9569055536</p>
+<p><strong>Email:</strong> info@printmax.com</p>
+<p><strong>Address:</strong> Your Business Address Here</p>
+
+<br>
+
+<p>
+We provide quick quotations and fast delivery for all
+printing and branding requirements.
+</p>
+</div>
+
+<div class="contact-form">
+<form>
+
+<input type="text" placeholder="Your Name" required>
+
+<input type="email" placeholder="Your Email" required>
+
+<input type="tel" placeholder="Phone Number">
+
+<textarea rows="5" placeholder="Tell us about your project"></textarea>
+
+<button type="submit">Send Inquiry</button>
+
+</form>
+</div>
+
+</div>
+
+</div>
+</section>
+
+<footer>
+© 2026 PrintMax Advertising. All Rights Reserved.
+</footer>
+<!-- WhatsApp Button -->
+<a href="https://wa.me/919872111719?text=Hello%20PrintMax%20I%20need%20a%20quote"
+   target="_blank"
+   class="whatsapp-btn">
+   💬 WhatsApp
+</a>
+
+<!-- Call Button -->
+<a href="tel:+919872111719"
+   class="call-btn">
+   📞 Call Now
+</a>
+<a href="https://www.instagram.com/mastergraphix1/?hl=en"
+   target="_blank"
+   class="instagram-btn">
+   📸 Instagram
+</a>
+</body>
+</html>
